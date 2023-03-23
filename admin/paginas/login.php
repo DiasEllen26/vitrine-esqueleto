@@ -14,7 +14,7 @@
         $consulta->execute();
         
 
-        //transofrma retorno em objeto
+        //transforma retorno em objeto
         $dados = $consulta->fetch(PDO::FETCH_OBJ);
         
         //exibe dados na tela
@@ -23,8 +23,18 @@
         //caso não encontre id no banco aparece mensagem de erro
         if (!isset($dados->id) ) {
             mensagemErro("Usuario não encontrado ou inativo.");
+        } else if (!password_verify($senha, $dados->senha))  {
+            mensagemErro("Senha incorreta.");
         }
+        
+        $_SESSION["usuario"] = array(
+            "id" => $dados -> id,
+            "nome" => $dados -> nome,
+            "login" => $dados -> login
+        );
 
+        echo "<script>location.href='paginas/home'</script>";
+        exit;
     }
 ?>
 <div class="login">

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require "../config.php"
 ?>
 <!DOCTYPE html>
@@ -60,10 +61,27 @@
 
     //chama função biblioteca do javascript para modal 
         require "funcoes.php";
+        if (!isset ($_SESSION["usuario"])) {
+            require "paginas/login.php";
+        } else { 
+            $pagina = "home";
 
-    //
-        require "paginas/login.php";
-
+            if(isset($_GET["param"])) {
+                $pagina = $_GET["param"];
+                $param = explode ("/", $pagina);
+                $pasta = $param[0] ?? NULL;
+                $pagina = $param[1] ?? NULL;
+                $id = $param[2] ?? NULL;
+            }
+            $pagina="{$pasta}/{$pagina}";
+            require "header.php";
+            if (file_exists("{$pagina}.php")) {
+                require "{$pagina}.php";
+            } else {
+                require "paginas/erro.php";
+        }
+        require"footer.php";
+        } 
     ?>
 
 </body>
