@@ -49,6 +49,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
     <link rel="stylesheet" type="text/css" href="vendor/summernote/summernote.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/summernote/summernote-bs4.min.css">
