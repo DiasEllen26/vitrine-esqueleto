@@ -6,7 +6,7 @@
           <input type="text" name="nome" id="nome" class="form-control" placeholder="Inserir nome..." value="">
         <div class="form-group">
           <label for="id">ID</label>
-          <input type="number" name="id" id="id" class="form-control" placeholder="Inserir ID..." required value="">
+          <input type="tex5" name="id" id="id" class="form-control" placeholder="Inserir ID..." value="">
         </div>
         <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
     </form>
