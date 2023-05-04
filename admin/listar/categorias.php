@@ -21,10 +21,12 @@
             <td><?=$categoria->id?></th>
             <td><?=$categoria->nome?></td>
             <td> 
-                <button type="button" class="btn btn-warning">Alterar</button>
+                <a href="cadastros/categorias/<?=$categoria->id?>" class="btn btn-success">
+                <i class="fas fa-edit"></i>
+                </a>
                 <form action="./deletar/categorias" method="post">
                     <input type="hidden" name="id" value="<?=$categoria->id?>">
-                    <input type="submit" class="btn btn-danger" value="Deletar">
+                    <input type="submit" class="h-25" value="Deletar">
                 </form>
             </td>
         </tr>
@@ -35,10 +37,3 @@
     </table>
 </div>
 <?php 
-//BUSCAR TODAS AS CATEGORIAS COM SQL OK
-//INCLUIR O RETORNO DO SQL DENTRO DA TABELA OK
-//ADD UMA NOVA COLUNA NA TABELA CHAMADA OPÇÃO OK
-//ADD NA COLUNA DE OPÇÕES O BOTÃO DE EXCLUIR E EDITAR OK 
-//ESCREVER FUNCIONALIDADE PARA EXCLUIR UMA CATEGORIA
-//ESCREVER FUNCIONALIDADEP ENVIAR O ID DA CATEGORIA O ID DA CATEGORIAP O FORMULARIO DE CADATRAR E 
-//VALIDAR P CARREGAR OS DADOS 
