@@ -20,13 +20,13 @@
         <tr scope="row" class="table-primarytext-dark">
             <td><?=$categoria->id?></th>
             <td><?=$categoria->nome?></td>
-            <td> 
+            <td class="d-flex justify-content-around"> 
                 <a href="cadastros/categorias/<?=$categoria->id?>" class="btn btn-success">
-                <i class="fas fa-edit"></i>
+                <i class="fas fa-edit"></i>Alterar
                 </a>
                 <form action="./deletar/categorias" method="post">
-                    <input type="hidden" name="id" value="<?=$categoria->id?>">
-                    <input type="submit" class="h-25" value="Deletar">
+                 <input type="hidden" name="id" value="<?=$categoria->id?>">
+                 <button type="submit" class="btn btn-danger" value="Deletar"><i class="bi bi-trash3-fill"></i> Deletar</button>
                 </form>
             </td>
         </tr>
